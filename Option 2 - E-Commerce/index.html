@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VÉLORA | Shop Everything You Love</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            VÉLORA
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#categories">Categories</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="search-button" onclick="focusSearch()">
+                🔍
+            </button>
+
+            <button class="cart-button" onclick="openCart()">
+                🛒
+                <span id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="hero-small">
+                NEW COLLECTION 2026
+            </p>
+
+            <h1>
+                Discover Things<br>
+                You'll <span>Love.</span>
+            </h1>
+
+            <p>
+                Explore carefully selected products designed
+                to make your everyday life better.
+            </p>
+
+            <button class="shop-now" onclick="scrollToShop()">
+                Shop Now →
+            </button>
+
+        </div>
+
+        <div class="hero-visual">
+            <div class="hero-circle"></div>
+
+            <div class="hero-card">
+                <span>NEW</span>
+                <h3>Premium<br>Collection</h3>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SEARCH -->
+    <section class="search-section">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            oninput="searchProducts()"
+        >
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="categories" id="categories">
+
+        <div class="section-heading">
+            <p>EXPLORE</p>
+            <h2>Shop by Category</h2>
+        </div>
+
+        <div class="category-list">
+
+            <button onclick="filterCategory('all')">
+                All
+            </button>
+
+            <button onclick="filterCategory('electronics')">
+                Electronics
+            </button>
+
+            <button onclick="filterCategory('fashion')">
+                Fashion
+            </button>
+
+            <button onclick="filterCategory('home')">
+                Home
+            </button>
+
+            <button onclick="filterCategory('accessories')">
+                Accessories
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <section class="products-section" id="shop">
+
+        <div class="section-heading">
+
+            <p>OUR COLLECTION</p>
+
+            <h2>Featured Products</h2>
+
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+
+    </section>
+
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div id="productModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-button" onclick="closeProductModal()">
+                ×
+            </button>
+
+            <div id="productDetails"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CART SIDEBAR -->
+    <div id="cartOverlay" class="cart-overlay">
+
+        <div class="cart-panel">
+
+            <div class="cart-header">
+
+                <h2>Your Cart</h2>
+
+                <button onclick="closeCart()">
+                    ×
+                </button>
+
+            </div>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-footer">
+
+                <div class="cart-total">
+                    Total:
+                    <span id="cartTotal">₹0</span>
+                </div>
+
+                <button class="checkout-button" onclick="checkout()">Proceed to Checkout</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            VÉLORA
+        </div>
+
+        <p>
+            Shop. Discover. Enjoy.
+        </p>
+
+        <p class="copyright">
+            © 2026 VÉLORA. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
